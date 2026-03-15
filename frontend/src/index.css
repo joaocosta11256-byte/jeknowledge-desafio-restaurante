@@ -1,0 +1,20 @@
+/* Limpa margens padrão do browser e ajusta o box-sizing */
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f0f2f5; /* A mesma cor de fundo que usámos na app */
+  width: 100%;
+  height: 100%;
+}
+
+/* Garante que os paddings não aumentam o tamanho real das caixas */
+* {
+  box-sizing: inherit;
+}
+
+/* Remove a formatação padrão da div #root do Vite */
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
