@@ -68,7 +68,7 @@ export default function KitchenView() {
     return data.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
   };
 
-  // --- Funções de DRAG AND DROP ---
+  // Funções de DRAG AND DROP
   const handleDragStart = (e, pedidoId) => {
     e.dataTransfer.setData('pedidoId', pedidoId);
   };
@@ -142,7 +142,7 @@ export default function KitchenView() {
                   ))}
                 </ul>
                 
-                {/* O Botão de Avançar regressa, trabalhando em harmonia com o Drag-and-Drop */}
+                {/* O Botão de Avançar & Drag-and-Drop */}
                 {coluna !== 'Concluded' && (
                   <button 
                     onClick={(e) => avancarFaseBotao(pedido.id, coluna, e)}

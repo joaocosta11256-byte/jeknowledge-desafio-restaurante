@@ -21,8 +21,7 @@ class OrderLineSerializer(serializers.ModelSerializer):
 
 # 3. Serializer para o Pedido Principal (A fatura da mesa)
 class OrderSerializer(serializers.ModelSerializer):
-    # 'lines' é o related_name que definimos no models.py. 
-    # Isto aninha as linhas dentro do pedido!
+    # 'lines' é o related_name que defini no models.py. 
     lines = OrderLineSerializer(many=True)
 
     class Meta:

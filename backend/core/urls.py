@@ -20,6 +20,6 @@ from django.urls import path, include
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    # Estamos a dizer: "Tudo o que começar por /api/, vai procurar ao ficheiro api/urls.py"
+    # tudo o que começar por /api/, vai procurar ao ficheiro api/urls.py
     path('api/', include('api.urls')),
 ]
