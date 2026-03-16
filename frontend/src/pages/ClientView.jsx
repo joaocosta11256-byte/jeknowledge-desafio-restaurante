@@ -29,11 +29,15 @@ export default function ClientView() {
       }
       return [...carrinhoAtual, { menu_item: pratoId, nome: nome, quantity: quantidade }];
     });
+  };          
+
+  const removerDoPedido = (pratoId) => {
+    setCart((carrinhoAtual) => carrinhoAtual.filter(item => item.menu_item !== pratoId));
   };
 
   const submeterPedido = async () => {
     const numeroMesa = parseInt(tableNumber);
-    if (!tableNumber||isNaN(numeroMesa) || numeroMesa <= 0) {
+    if (!tableNumber || isNaN(numeroMesa) || numeroMesa <= 0) {
       alert("Por favor, selecione o número da mesa antes de pedir.");
       return;
     }
@@ -172,8 +176,18 @@ export default function ClientView() {
             ) : (
               <ul style={{ padding: '0', margin: '0', listStyle: 'none' }}>
                 {cart.map((item, index) => (
-                  <li key={index} style={{ display: 'flex', justifyContent: 'space-between', padding: '10px 0', borderBottom: '1px solid #f1f5f9', color: '#334155' }}>
+                  <li key={index} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '10px 0', borderBottom: '1px solid #f1f5f9', color: '#334155' }}>
                     <span><strong>{item.quantity}x</strong> {item.nome}</span>
+                    
+                    {/* Botão de Remover */}
+                    <button 
+                      onClick={() => removerDoPedido(item.menu_item)}
+                      style={{ padding: '4px 8px', backgroundColor: '#ef4444', color: 'white', border: 'none', borderRadius: '4px', cursor: 'pointer', fontSize: '12px', fontWeight: 'bold' }}
+                      title="Remover do pedido"
+                    >
+                      X
+                    </button>
+                    
                   </li>
                 ))}
               </ul>
