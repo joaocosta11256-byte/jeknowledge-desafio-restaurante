@@ -13,7 +13,19 @@ O sistema permite que os clientes efetuem pedidos através de uma interface intu
 
 **Nota Importante:** O ficheiro `db.sqlite3` foi intencionalmente incluído no repositório com o menu inicial pré-populado. Isto permite testar a aplicação imediatamente sem necessidade de correr scripts de *seed* ou adicionar pratos manualmente no painel de administração.
 
-### 1. Iniciar o Backend (Django)
+### 1. Iniciar o Backend (Django) e a Base de Dados
+1. Abra um terminal e navegue para a pasta `backend`.
+2. Ative o ambiente virtual:
+   * Windows: `venv\Scripts\activate`
+   * Mac/Linux: `source venv/bin/activate`
+3. Instale as dependências: `pip install django djangorestframework django-cors-headers`
+4. Crie a base de dados e aplique as migrações: `python manage.py migrate`
+5. Popule o menu inicial correndo o script de seed: `python seed_menu.py`
+6. (Opcional) Crie um superuser para aceder ao admin: `python manage.py createsuperuser`
+7. Inicie o servidor: `python manage.py runserver`
+8. A API ficará disponível em `http://localhost:8000/api/`
+
+### 2. Iniciar o Backend (Django)
 1. Abra um terminal e navegue para a pasta `backend`.
 2. Ative o ambiente virtual:
    * Windows: `venv\Scripts\activate`
@@ -22,11 +34,12 @@ O sistema permite que os clientes efetuem pedidos através de uma interface intu
 4. Inicie o servidor: `python manage.py runserver`
 5. A API ficará disponível em `http://localhost:8000/api/`
 
-### 2. Iniciar o Frontend (React)
+### 3. Iniciar o Frontend (React)
 1. Abra um **novo** terminal e navegue para a pasta `frontend`.
 2. Instale as dependências: `npm install react-router-dom`
 3. Inicie o servidor de desenvolvimento: `npm run dev`
 4. Aceda à aplicação no browser: `http://localhost:5173/`
+
 
 ## 🏗️ Decisões Arquiteturais Relevantes
 

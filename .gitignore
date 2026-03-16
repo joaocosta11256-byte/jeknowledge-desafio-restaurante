@@ -24,9 +24,10 @@ dist-ssr
 *.sln
 *.sw?
 
-# Python 
+# Python / Django
 venv/
 env/
 __pycache__/
 *.pyc
 *.pyo
+db.sqlite3
