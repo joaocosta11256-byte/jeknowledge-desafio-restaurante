@@ -16,7 +16,7 @@ def seed_menu():
         },
         {
             "name": "Creme de Legumes", 
-            "description": "Sopa aveludada de legumes frescos da época", 
+            "description": "Sopa de legumes frescos da época", 
             "category": "Sopas",
             "ingredients": "Batata, Cenoura, Cebola, Azeite, Sal"
         },
