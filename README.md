@@ -1,11 +1,11 @@
-# Sistema de Gestão de Pedidos - Restaurante (jeKnowledge)
+# Sistema de Gestão de Pedidos - Restaurante
 
 O sistema permite que os clientes efetuem pedidos através de uma interface intuitiva e que a cozinha faça a gestão do estado desses pedidos num dashboard Kanban.
 
 ## 🛠️ Stack Tecnológica Escolhida e Justificação
 
 * **Backend:** Python com Django REST Framework (DRF) e SQLite.
-    * *Justificação:* O Django é a recomendação principal do guião. Permitiu expor uma REST API limpa e estruturada de forma rápida. O uso de SQLite cumpre o requisito de configuração local mínima, evitando a necessidade de instalar servidores de base de dados complexos.
+    * *Justificação:* Utilização de Django e de SQLite, que permitiu expor uma REST API limpa e estruturada de forma rápida.
 * **Frontend:** React (JavaScript) com Vite.
     * *Justificação:* O Dashboard da Cozinha exige uma gestão de estado complexa (mover pedidos entre fases). A arquitetura baseada em componentes do React e o uso de *Hooks* (`useState`, `useEffect`) garante que a interface se mantém reativa, limpa e imune a *spaghetti code* que resultaria da manipulação direta do DOM com Vanilla JS.
 
